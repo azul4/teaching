@@ -1,0 +1,18 @@
+"""
+list()
+usage of del
+for _ in b:
+print("***", end = '')
+"""
+
+n = int(input())
+
+for i in range(n):
+    a, b = input().split()
+    a = int(a)
+    b = list(b)
+
+    del b[a-1]
+    for _ in b:
+        print(_, end='')
+    print()
