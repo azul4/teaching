@@ -1,0 +1,29 @@
+original = int(input()) #첫 입력을 원본으로 저장
+                        #original은 훼손하지 않기로 약속
+one = 0 #원래 1의자리 수
+ten = 0 #원래 10의자리 수
+new_1 = 0 #새로운 1의자리 수
+new_10 = 0 #새로운 10의자리 수
+count = 0 #반복문이 몇번 돌았는지?
+
+temp = original
+
+while True:
+    ten = temp // 10
+    one = temp % 10
+    
+    new_1 = (ten + one) % 10
+    new_10 = one * 10
+    new = new_1 + new_10
+    
+    count += 1
+    
+    if original == new:
+        break
+    else:
+        temp = new
+        
+print(count)
+
+
+# for문 x
