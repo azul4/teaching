@@ -1,0 +1,36 @@
+"""
+1157 단어공부
+Dictionary 공부하기 좋음
+dictionary method function: .items() / .get()
+Dealing with tuple
+Function max()
+"""
+
+
+def find(dic):
+    li = []
+    items = tuple(dic.items())
+    
+    for i in items:
+        li.append(i[1])
+    if li.count(max(li)) > 1:
+        return "?"
+    
+    for i in items:
+        if i[1] == max(li):
+            return i[0]
+    
+        
+
+n = input().upper()
+n = list(n) 
+dic = {}
+highest_index= ' '
+highest_value=0
+for i in n:
+    if dic.get(i, 'NO') == 'NO':
+        dic[i] = 1
+    else:
+        dic[i] += 1
+
+print(find(dic))
