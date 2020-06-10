@@ -1,0 +1,9 @@
+a = int(input())
+array = [0, 1]
+for i in range(a-1):
+    temp = array[i] + array[i+1]
+    array.append(temp)
+print(array.pop())
+        
+#재귀 x, 수열 처음 접근하는 학생들에게.
+#영어버전 존재함.
