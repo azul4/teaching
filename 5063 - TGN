@@ -1,0 +1,15 @@
+n = int(input())
+
+for i in range(n):
+    r, e, c = map(int, input().split())
+    if r > e - c:
+        print("do not advertise")
+    elif r == e - c:
+        print("does not matter")
+    else:
+        print("advertise")
+
+"""
+문제가 길다고 쫄지 말자!
+TEST CASE 익숙하게 만들기 - for i in range(testcase):
+"""
