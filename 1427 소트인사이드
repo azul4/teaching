@@ -1,0 +1,8 @@
+n = list(input())
+n.sort()
+n.reverse()
+for i in n:
+    print(i, end='')
+
+#간단한 문제
+#list method function 
