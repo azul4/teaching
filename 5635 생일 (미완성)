@@ -1,0 +1,41 @@
+def old_young(name, year, month, day):
+    young = ""
+    old = ""
+    #youngest
+    if year.count(min(year)) == 1:
+        young = name[year.index(min(year))]
+    else:
+        candidate = 
+        if month.count(min(month)) == 1:
+        young = name[month.index(min(month))]
+    elif 
+        
+        
+    #oldest
+    if year.count(max(year)) == 1:
+        young = name[year.index(max(year))]
+
+
+    return young, old
+
+n = int(input())
+name = []
+day = []
+month = []
+year = []
+
+for i in range(n):
+    a, b, c, d = input().split()
+    name.append(a)
+    day.append(int(b))
+    month.append(int(c))
+    year.append(int(d))
+
+t = old_young(name, year, month, day)
+print(t[0])
+print(t[1])
+
+
+"""
+클래스로 푸는 방법은?
+"""
