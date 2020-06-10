@@ -1,0 +1,79 @@
+"""
+
+[Making Simple Calculator]
+
+     This lesson is about an example Python project: a simple calculator.
+
+     The first section is the overall menu. This keeps on accepting user input until the user enters "Quit". Assume that user will input only among these - “add”, “sub”, “mul”, “div”, “Quit”, which literally means addition, subtraction, multiplication, division, and quitting respectively.
+
+     The second section will be the if-else paragraph. As the user gives us a two integer as a input, we have to distinguish which string is and make the calculation. After calculating two numbers, we have to show what’s the result.
+
+     You must complete this project, since your code will be used as a guide for learning function. We’ll learn how to make function out of the code you’ll make.
+
+
+     User input & output goes like the figure below.
+
+
+     Create a code.
+"""
+  
+#without a function
+print("Welcome to our calculating system!")
+
+while True:
+    print("Put two integers you want to compute.")
+    print("For example, \"2 3\". ")
+    a, b = map(int, input().split())
+    
+    print("Give me the operation you want.", end='')
+    print("Type among these: add, sub, mul, div")
+    op = input()
+    
+    if(op == 'add'):
+        print("The result is {}.".format(a + b))
+    elif(op == 'sub'):
+        print("The result is {}.".format(a - b))
+    elif(op == 'mul'):
+        print("The result is {}.".format(a * b))
+    elif(op == 'div'):
+        print("The result is {}.".format(a / b))
+    else:
+        print("Invalid operation")
+        break
+
+#with a function
+def calculate(num1, num2, op):
+    result = 0
+    if(op == 'add'):
+        result = num1 + num2
+    elif(op == 'sub'):
+        result = num1 - num2
+    elif(op == 'mul'):
+        result = num1 * num2
+    elif(op == 'div'):
+        result = num1 / num2
+    else:
+        result = None
+    return result
+    
+print("Welcome to our calculating system!")
+
+while True:
+    print("Put two integers you want to compute.")
+    print("For example, \"2 3\". ")
+    a, b = map(int, input().split())
+    
+    print("Give me the operation you want.", end='')
+    print("Type among these: add, sub, mul, div")
+    op = input()
+
+    result = calculate(a, b, op)
+    if result != None:
+        print("The result is {}".format(result))
+    else:
+        print("We've got wrong operation. Quitting.")
+        break
+
+
+
+#Excpetion과 연결지어 코드를 변형시킬 수도 있음.
