@@ -1,0 +1,17 @@
+li = list(input())
+
+li2 = li[:]
+li.reverse()
+
+result = 1
+for i in range(len(li)):
+    if li[i] != li2[i]:
+        result = 0
+        break
+
+print(result)
+
+"""
+list.reverse()
+list indexing
+"""
