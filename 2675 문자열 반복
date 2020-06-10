@@ -1,0 +1,12 @@
+n = int(input())
+
+for _ in range(n):
+    a, b = input().split()
+    a = int(a)
+    b = list(b)
+    for i in b:
+        print(i * a, end='')
+    print()
+
+#OX퀴즈랑 비슷한 문제
+#7~9번 줄 유의
