@@ -1,0 +1,15 @@
+ddakji = int(input())
+gumsa = map(int, list(input().split()))
+count = 0
+
+for i in gumsa:
+    if i == ddakji:
+        count +=1
+
+print(count)
+
+
+"""
+map 함수의 특징 유추.
+괄호가 많이 들어있는 함수 쓰기 연습.
+"""
