@@ -1,8 +1,12 @@
+# List 활용 방법
 n, m = map(int, input().split())
 girl_group = []
+
+# getting input
 for _ in range(n):
     group_name = input()
     members = int(input())
+    member_name = []
     for _ in range(members):
         member_name.append(input())
     member_name.sort()
@@ -11,19 +15,21 @@ for _ in range(n):
 
 # quiz
 for _ in range(m):
-    name_containing = input()
-    member_or_team = int(input())
-    if member_or_team == 0: # if member print
+    girl = input()  
+    member_or_team = int(input())  
+    if member_or_team == 0:  # if member print
         for i in range(n):
-            if name_containing in girl_group[i]:
-                for j in name_containing:
+            if girl == girl_group[i][0]:
+                for j in girl_group[i][1:]:
                     print(j)
-    else: # if team print
-        for i in girl_group:
-            print("not yet")
+                break
 
+    else:  # if team print
+        for i in range(n):
+            if girl in girl_group[i]:
+                print(girl_group[i][0])
 
-# 미완성
-# 리스트 활용 방법
-# 딕셔너리 활용 방법
-# d
+                
+"""
+딕셔너리 활용 방법은?
+"""
