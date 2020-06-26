@@ -1,0 +1,6 @@
+a, b, c, d = map(int, input().split())
+
+print(a*b+c*d)
+
+#그냥 영어문제라서
+#국제학교 학생들 북돋아주려고
